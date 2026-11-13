@@ -1,6 +1,6 @@
-# Showpad Skills for Developers
+# Showpad Developer Skills
 
-Agent skills for building Showpad Apps v2 and working with the Showpad SDKs. They give Claude Code and other coding agents the exact CLI commands, manifest fields, extension types, SDK method signatures and types, so the agent doesn't have to guess them.
+AI skills for building Showpad Apps v2 and working with the Showpad SDKs, without technical knowledge. They give Claude Code and other coding agents the exact CLI commands, manifest fields, extension types, SDK method signatures and types, so the agent doesn't have to guess them.
 
 ## Skills
 
