@@ -1,0 +1,44 @@
+{
+  "name": "showpad-developer-skills",
+  "owner": {
+    "name": "Showpad"
+  },
+  "metadata": {
+    "description": "Claude Code skills for developers.",
+    "version": "1.1.0"
+  },
+  "plugins": [
+    {
+      "name": "showpad-apps",
+      "source": "./",
+      "description": "Showpad App v2 lifecycle: scaffolding, CLI, manifest, extensions, upload.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Showpad"
+      },
+      "homepage": "https://developer.showpad.com/docs/appsv2/intro",
+      "keywords": ["showpad", "showpad-apps", "cli"],
+      "category": "development",
+      "skills": ["./skills/showpad-app"],
+      "dependencies": ["showpad-sdks"]
+    },
+    {
+      "name": "showpad-sdks",
+      "source": "./",
+      "description": "Reference for the Experience App SDK and the Experience Editor SDK.",
+      "version": "1.1.0",
+      "author": {
+        "name": "Showpad"
+      },
+      "homepage": "https://developer.showpad.com/docs/appsv2/references",
+      "keywords": [
+        "showpad",
+        "experience-app-sdk",
+        "experience-editor-sdk",
+        "sdk"
+      ],
+      "category": "development",
+      "skills": ["./skills/showpad-app-sdk", "./skills/showpad-app-editor-sdk"]
+    }
+  ]
+}
