@@ -4,10 +4,10 @@ AI skills for building Showpad Apps v2 and working with the Showpad SDKs, withou
 
 ## Skills
 
-| Plugin         | Skills                                                                                                                   | Use it for                                                                                                                                                     |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `showpad-apps` | [`showpad-app`](skills/showpad-app/SKILL.md)                                                                             | The whole Showpad App v2 lifecycle: scaffolding, the Showpad CLI, manifest, extension types, bundling, uploading and fixing errors. Depends on `showpad-sdks`. |
-| `showpad-sdks` | [`showpad-app-sdk`](skills/showpad-app-sdk/SKILL.md), [`showpad-app-editor-sdk`](skills/showpad-app-editor-sdk/SKILL.md) | Reference for `@showpad/experience-app-sdk` (`Showpad.*`) and `@showpad/experience-editor-sdk` (`ShowpadEditor.*`, used to build Custom Editors).              |
+| Plugin         | Skills                                                                                                                   | Use it for                                                                                                                                                                                                            |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `showpad-apps` | [`showpad-app`](skills/showpad-app/SKILL.md), [`showpad-html-app`](skills/showpad-html-app/SKILL.md)                     | The whole Showpad App v2 lifecycle: scaffolding, the Showpad CLI, manifest, extension types, bundling, uploading and fixing errors. Depends on `showpad-sdks`. HTML5 web apps: zip packaging, no admin configuration. |
+| `showpad-sdks` | [`showpad-app-sdk`](skills/showpad-app-sdk/SKILL.md), [`showpad-app-editor-sdk`](skills/showpad-app-editor-sdk/SKILL.md) | Reference for `@showpad/experience-app-sdk` (`Showpad.*`) and `@showpad/experience-editor-sdk` (`ShowpadEditor.*`, used to build Custom Editors).                                                                     |
 
 ## Installation
 

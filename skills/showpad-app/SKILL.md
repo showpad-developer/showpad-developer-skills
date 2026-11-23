@@ -1,7 +1,7 @@
 ---
 name: showpad-app
-description: This skill should be used when the user asks to "create a Showpad App", "scaffold a Showpad App", "build a Showpad App", "develop a Showpad App v2", "upload a Showpad App", "bundle a Showpad App", "add a Showpad extension", "create an experience type", "create a custom editor", "create admin settings extension", "create user settings extension", "create add content extension", "create asset viewer extension", "create shared space extension", or anything related to Showpad Apps v2 development, the Showpad CLI, or the Experience App SDK.
-version: 1.1.0
+description: This skill should be used when the user asks to "create a Showpad App", "scaffold a Showpad App", "build a Showpad App", "develop a Showpad App v2", "upload a Showpad App", "bundle a Showpad App", "add a Showpad extension", "create an experience type", "create a custom editor", "create admin settings extension", "create user settings extension", "create add content extension", "create asset viewer extension", "create shared space extension", or anything related to Showpad Apps v2 development, the Showpad CLI, or the Experience App SDK. For a zipped HTML5 web app uploaded to the Library as an asset, or when deciding between the two, use the showpad-html-app skill instead.
+version: 1.2.0
 ---
 
 # Showpad App v2 Developer Skill
@@ -18,6 +18,9 @@ You guide developers through the Showpad App v2 lifecycle: scaffold → develop 
 | `references/error-reference.md`    | diagnosing bundle, upload or validation errors                         |
 | `showpad-app-sdk` skill            | writing any `Showpad.*` call (signatures, types, AppsDB methods)       |
 | `showpad-app-editor-sdk` skill     | building a Custom Editor (`editorFolder`, `ShowpadEditor.*`)           |
+| `showpad-html-app` skill           | the user wants a static HTML5 web app (Library `.zip` asset) instead   |
+
+**Check first that a Showpad App is the right fit.** If the user wants self-contained interactive content with no admin configuration, no `trackEvent`, no AppsDB, and it must be shareable in Shared Spaces, an HTML5 web app is simpler: switch to the `showpad-html-app` skill. "Showpad app" in casual speech can mean either, so ask if it's unclear.
 
 Don't start scaffolding until the Phase 1 questions are answered. If the user's message already answers them, go straight to Phase 2.
 
@@ -38,7 +41,7 @@ Ask the unanswered questions in a single message:
    | Enhance the asset viewer                              | `assetViewerExtensions` |
    | Quick Actions in Shared Spaces                        | `sharedSpaceExtensions` |
 
-   For `experienceTypes`, also ask: should admins edit it with the **Default Editor** (a form generated from `config.json`) or a **Custom Editor** (your own webapp, set with `editorFolder`)? Custom Editors are **beta**: they rely on `Showpad.getConfig` / `getAssetsByIds` / `getAssetIdsByFilterId`, which only work on orgs with the `experience_app_custom_editors` feature flag.
+   For `experienceTypes`, also ask: should admins edit it with the **Default Editor** (a form generated from `config.json`) or a **Custom Editor** (your own webapp, set with `editorFolder`)? Custom Editors are **beta**: they rely on `Showpad.getConfig` / `getAssetsByIds` / `getAssetIdsByFilterId`, which only work on orgs with the `experience_app_custom_editor` feature flag. If it isn't enabled, they must ask their Showpad account manager.
 
 2. **App key?** Format `com.your-company.your-app`. It must be globally unique, lowercase (`^[a-z][a-z0-9.-]+$`) and must not start with `com.showpad.`.
 3. **Developer name?** Must not contain `showpad`.
