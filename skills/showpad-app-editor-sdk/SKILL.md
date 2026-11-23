@@ -13,7 +13,7 @@ A **Custom Editor** replaces the form that Showpad generates from `config.json` 
 - `ShowpadEditor.*` is available **only inside the `editorFolder` iframe**. It needs no initialization call.
 - `Showpad.*` calls (`getConfig`, `getAssetsByIds`, `getAssetIdsByFilterId`) still require `await Showpad.onShowpadLibLoaded()` first. Invoke the `showpad-app-sdk` skill for their signatures.
 
-> **Beta — feature flag required.** Custom Editors depend on `Showpad.getConfig`, `Showpad.getAssetsByIds` and `Showpad.getAssetIdsByFilterId`, which are beta and only work on organizations with the **`experience_app_custom_editors`** feature flag enabled by Showpad. Before building a Custom Editor, tell the user and confirm that the flag is (or will be) enabled on every org the app is assigned to. If it isn't, use the Default Editor (`config.json` + `parseConfig`). `Showpad.hasFeature()` doesn't cover this flag.
+> **Beta — feature flag required.** Custom Editors depend on `Showpad.getConfig`, `Showpad.getAssetsByIds` and `Showpad.getAssetIdsByFilterId`, which are beta and only work on organizations with the **`experience_app_custom_editors`** feature flag enabled by Showpad. Before building a Custom Editor, tell the user and ask them to confirm that the flag is enabled on every org the app will be assigned to. If not enabled, they must ask their Showpad account manager to enable it or use the Default Editor (`config.json` + `parseConfig`).
 
 ---
 
